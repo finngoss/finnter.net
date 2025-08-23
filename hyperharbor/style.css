@@ -1,0 +1,20 @@
+body {
+    display: flex;
+    flex-flow:wrap;
+    max-width: 100vw;
+    /* flex-wrap: wrap; */
+    background-color: beige;
+    gap: 10px;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    background-color: darkgrey;
+    width: fit-content;
+    height: fit-content;
+}
+
+ul{
+    /* list-style-image: url('../images/anchor.png'); */
+}
