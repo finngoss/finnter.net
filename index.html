@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="author" content="finn goss">
+    <meta name="description" content="personal website, portfolio, and blog of finn goss">
+    <meta name="keywords" content="finn goss, finn, finnley, finnley goss, portfolio, blog, personal website, indie web, montana, missoula, mt, missoula mt, finnternet, finnter.net, math, math blog, blog, mathematics, farey, number theory, modular forms, ellipitic curves, algebra, math portfolio, research, generative art, math research, p5.js, math art, textiles, texxture, textile math, weaving, art, art history, mathematica, metamath, metamathematica, metamagical themas">
+    <title>finnter.net</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  </head>
+<body>
+
+<div id="wallpaper">
+    <img id="high-wide-and-handsome" src="/images/high-wide-and-handsome.png">
+
+    <header>
+        <img src="/gifs/fancypants.gif" width="100px">
+        <h1>finnter.net</h1>
+         <img src="/gifs/kirby-dancing.gif" width="50px">
+         <img src="/gifs/star-spinning.gif" width="50px">
+    </header>
+
+    <div id="screen">
+    <div id="treasure">
+        <details>
+            <summary>Huckleberry Finnley's Treasure State(ment):</summary>
+            <p>
+                welcome to my digital garden (city)&mdash;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;please, stay a while and smell the simulacra, it's pretty!<br>
+                I do it all for the patternpilled texxturemaxxers&mdash;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;I like it overgrown, say no to weedwackers<br>
+            </p>
+        </details>
+    </div>
+
+    <span id="lastbestwhere">last best <abbr title="place!">where?</abbr></span>
+
+    <span id="bigskywhat">big sky <abbr title="country!">what?</abbr></span>
+
+    <span id="ariverruns"><s>a river runs through huh?</s> <br>oh, enough of that!</span>
+
+    <span id="ososypata"><abbr title="yup!">osos y pata?</abbr></span>
+
+    <a href="/math/">
+        <img id="clocktower" src="/images/clocktower.png" alt="University of Montana clock tower">
+    </a>
+    
+    <img id="peace" src="/images/peace.png" alt="Waterworks hill peace sign">
+
+    <img id="radio" src="/images/radio.png" alt="Waterworks hill radio tower">
+
+    <img id="xxxx" src="/images/xxxx.png" alt="Red XXXX">
+
+    <img id="webarebears" src="/images/webarebears.png" alt="realistic We Bare Bears">
+
+    <img id="duck" src="/images/duck.png" alt="duck that walked up to the lemonade stand">
+    
+    <dialog id="contact-me">
+        <p>Contact me at <a href="mailto:finnbox@finnter.net">finnbox@finnter.net</a></p>
+    </dialog>
+
+    </div>
+</div>
+
+<script>
+//duck dialog (contact me)
+const duck = document.getElementById('duck');
+  const dialog = document.getElementById('contact-me');
+
+  duck.addEventListener('click', () => {
+    if (dialog.open) {
+      dialog.close();
+    } else {
+      dialog.show();
+    }
+  });
+
+//draggable treasure div
+dragElement(document.getElementById("treasure"));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id)) {
+    document.getElementById(elmnt.id).onmousedown = dragMouseDown;
+  } else {
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+</script>
+</body>
+</html>
