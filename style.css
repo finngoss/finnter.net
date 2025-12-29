@@ -1,6 +1,27 @@
 /* *{
     outline: red 1px solid;
 } */
+:root{
+  --frame: rgb(233, 231, 228);
+}
+@keyframes bounce 
+{ 0% { transform: translateY(0) rotate(-10deg); } 100% { transform: translateY(-15px) rotate(-10deg); }}
+
+@keyframes shake {
+    0% { transform: scale(1.25) translate(0, 0) rotate(0deg); }
+    20% { transform: scale(1.25) translate(-2px, 1px) rotate(-2deg); }
+    40% { transform: scale(1.25) translate(2px, -1px) rotate(2deg); }
+    60% { transform: scale(1.25) translate(-2px, 2px) rotate(-1deg); }
+    80% { transform: scale(1.25) translate(1px, -2px) rotate(1deg); }
+    100% { transform: scale(1.25) translate(0, 0) rotate(0deg); }
+  }
+
+@font-face {
+  font-family: 'Ruritania';
+  font-weight: normal;
+  font-style: normal;
+  src: url('./_assets/fonts/ruritania/Ruritania.ttf') format('truetype');
+}
 
 html, body{
     margin: 0;
@@ -27,8 +48,8 @@ html, body{
     /* border: 10px inset burlywood; */
 
     /* background-color: rgb(255, 244, 179); */
-    background-image: url('images/wallpaper.png');
-    background-size:75px;
+    background-image: url('./_assets/images/swatch2.png');
+    background-size:60px;
     background-position: center;
     background-repeat: repeat;
 
@@ -38,7 +59,7 @@ html, body{
     align-items: center;
 }
 
-#high-wide-and-handsome{
+/* #high-wide-and-handsome{
     width: 20vw;
     position: absolute;
     top: 3vh;
@@ -47,6 +68,19 @@ html, body{
     transform: rotate(25deg);
     z-index: 11;
     overflow: hidden;
+} */
+#high-wide-and-handsome-text{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+color:rgb(0, 255, 174);
+text-shadow: none;
+position: absolute;
+top: 10vh;
+left: 4vw;
+font-size: 2rem;
+text-shadow: 2px 2px #ff17dc;
+z-index: 11;
+overflow: hidden;
+animation: bounce 0.5s infinite alternate; 
 }
 
 header{
@@ -61,24 +95,30 @@ header{
 }
 
 h1{
+  font-family: 'Ruritania';
+    padding-top: 12px;
     margin: 10px;
-    font-size: 2em;
+    font-size: 3em;
     text-align: center;
-    color: rgb(21, 141, 21);
+    color: rgb(123, 104, 123);
     /* background-color: rgb(148, 148, 38); */
 }
 
-#screen{
+h3{
+  text-align: center;
+}
+
+#frame{
     position: relative;
     width: 80vw;
     height: 75vh;
     
-    border-top: 5vh ridge rgb(189, 113, 12);
-    border-bottom: 5vh groove rgb(189, 113, 12);
-    border-left: 5vh groove rgb(189, 113, 12);
-    border-right: 5vh ridge rgb(189, 113, 12);
+    border-top: 5vh ridge var(--frame);
+    border-bottom: 5vh groove var(--frame);
+    border-left: 5vh groove var(--frame);
+    border-right: 5vh ridge var(--frame);
 
-    background-image: url('images/zootown.png');
+    background-image: url('./_assets/images/home.png');
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -90,7 +130,7 @@ h1{
 }
 
 #screen::before {
-    width: 100%;
+    /* width: 100%;
     height: 100%;
     content: " ";
     display: block;
@@ -101,9 +141,11 @@ h1{
     right: 0;
     background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
     z-index: 10;
-    background-size: 100% 2px, 3px 100%;
+    background-size: 100% 2px, 3px 100%; */
     pointer-events: none;
   }
+
+
 
 #treasure{
     font-size: 0.75em;
@@ -171,7 +213,7 @@ h1{
     padding-right: 10px;
     position: absolute;
     left: 45%;
-    top: 57%;
+    top: 59%;
 
     s {
         color: rgb(58, 68, 66);
@@ -183,6 +225,15 @@ h1{
       }
 }
 
+#fancypants{
+  width:50px;
+  position: absolute;
+  top:28%;
+  left:0;
+  z-index: 3;
+  transform: rotate(10deg);
+}
+
 #peace{
     width: 40px;
     position: absolute;
@@ -191,27 +242,49 @@ h1{
     z-index: 3; 
   }
 
+
   #clocktower{
-    width: 10px;
+    width: 15px;
     position: absolute;
-    top: 51%; 
-    left: 40%;
+    top: 47%; 
+    left: 38%;
+    z-index: 3; 
+  }
+    #library{
+    width: 45px;
+    position: absolute;
+    top: 55.5%; 
+    left: 46%;
     z-index: 3; 
   }
 
   #radio{
-    width: 0.5px;
+    width: 2px;
     position: absolute;
-    top: 47%; 
+    top: 22%; 
     left: 90%;
     z-index: 3; 
   }
+  #star{
+    width: 25px;
+    position: absolute;
+    top: 18%; 
+    left: 89%;
+    z-index: 3; 
+  }
+
+  #kirby{   
+    width: 25px;
+    position: absolute;
+    top: 52%; 
+    left: 85%;
+    z-index: 3; }
 
   #xxxx{
-    width: 30px;
+    width: 50px;
     position: absolute;
-    top: 59%; 
-    left: 62%;
+    top: 58%; 
+    left: 60%;
     z-index: 3; 
   }
 
@@ -244,37 +317,7 @@ h1{
     z-index: 9;
     text-shadow: none;
   }
-
-  @keyframes shake {
-    0% { transform: scale(1.25) translate(0, 0) rotate(0deg); }
-    20% { transform: scale(1.25) translate(-2px, 1px) rotate(-2deg); }
-    40% { transform: scale(1.25) translate(2px, -1px) rotate(2deg); }
-    60% { transform: scale(1.25) translate(-2px, 2px) rotate(-1deg); }
-    80% { transform: scale(1.25) translate(1px, -2px) rotate(1deg); }
-    100% { transform: scale(1.25) translate(0, 0) rotate(0deg); }
-  }
   
-  #peace:hover {
-    animation: shake 0.4s ease-in-out infinite;
-
-  }
-
-  #clocktower:hover {
-    animation: shake 0.4s ease-in-out infinite;
-  }
-
-  #radio:hover {
-    animation: shake 0.4s ease-in-out infinite;
-  }
-
-  #xxxx:hover {
-    animation: shake 0.4s ease-in-out infinite;
-  }
-
-  #webarebears:hover {
-    animation: shake 0.4s ease-in-out infinite;
-  }
-
-  #duck:hover {
+  .shake:hover{
     animation: shake 0.4s ease-in-out infinite;
   }
