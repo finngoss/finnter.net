@@ -217,7 +217,7 @@ h3{
 
     s {
         color: rgb(58, 68, 66);
-        text-shadow: rgba(87, 91, 90,0.5)
+        text-shadow: rgba(87, 91, 90,0.5);
         text-decoration: line-through;
         text-decoration-color: blue;
         text-decoration-thickness: 1px;
