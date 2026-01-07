@@ -16,15 +16,14 @@
     100% { transform: scale(1.25) translate(0, 0) rotate(0deg); }
   }
 
-cursor: url("./assets/Butterfly_manicule32.png") 0 0, auto;
-
-
 @font-face {
   font-family: 'Ruritania';
   font-weight: normal;
   font-style: normal;
   src: url('./assets/fonts/ruritania/Ruritania.ttf') format('truetype');
 }
+
+cursor: url("./assets/Butterfly_manicule32.png") 0 0, auto
 
 html, body{
     margin: 0;
