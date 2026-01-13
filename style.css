@@ -23,7 +23,7 @@
   src: url('./assets/fonts/ruritania/Ruritania.ttf') format('truetype');
 }
 
-cursor: url("./assets/Butterfly_manicule32.png") 0 0, auto
+cursor{ url("./assets/Butterfly_manicule64.png") 0 0, auto}
 
 html, body{
     margin: 0;
